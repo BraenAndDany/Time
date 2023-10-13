@@ -16,6 +16,7 @@ namespace Time
     {
         string copy;
         bool stopper = false;
+        string dirName = "C:\\";
         public Form1()
         {
             
@@ -36,26 +37,18 @@ namespace Time
           
         }
         async Task<string> timelocal()
-        {
-                
-                
-                //string dirName = "C:\\";
-                //// если папка существует
-                //if (Directory.Exists(dirName))
-                //{
-                //    string[] dirs = Directory.GetDirectories(dirName);
-                //    foreach (string s in dirs)
-                //    {
-                //        List.Text = (s);
-                //    }
-
-                //}
+        {    
             await Task.Delay(1000);
             return DateTime.Now.ToLongTimeString();
-        }
-        async private void click(object sender, MouseEventArgs e)
-        {
-           
+               if (Directory.Exists(dirName))
+                {
+                    string[] dirs = Directory.GetDirectories(dirName);
+                    foreach (string s in dirs)
+                    {
+                        List.Text = (s)+"\n";
+                    }
+
+                }
         }
 
         private void val(object sender, EventArgs e)
@@ -75,6 +68,9 @@ namespace Time
             {
                 var time = await timelocal();
                 Time.Text = time.ToString();
+                
+                // если папка существует
+                
             }
         }
         //async Task load()
