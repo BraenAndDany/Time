@@ -30,6 +30,7 @@
         {
             this.Time = new System.Windows.Forms.Label();
             this.List = new System.Windows.Forms.TextBox();
+            this.Btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Time
@@ -51,12 +52,23 @@
             this.List.Size = new System.Drawing.Size(263, 428);
             this.List.TabIndex = 3;
             // 
+            // Btn
+            // 
+            this.Btn.Location = new System.Drawing.Point(21, 111);
+            this.Btn.Name = "Btn";
+            this.Btn.Size = new System.Drawing.Size(113, 39);
+            this.Btn.TabIndex = 4;
+            this.Btn.Text = "button1";
+            this.Btn.UseVisualStyleBackColor = true;
+            this.Btn.Click += new System.EventHandler(this.Btn_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 452);
+            this.Controls.Add(this.Btn);
             this.Controls.Add(this.List);
             this.Controls.Add(this.Time);
             this.DoubleBuffered = true;
@@ -65,7 +77,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.size);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.click);
             this.Validated += new System.EventHandler(this.val);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -75,6 +86,7 @@
         #endregion
         private System.Windows.Forms.Label Time;
         private System.Windows.Forms.TextBox List;
+        private System.Windows.Forms.Button Btn;
     }
 }
 
