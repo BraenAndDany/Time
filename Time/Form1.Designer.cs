@@ -59,10 +59,10 @@
             this.Field.Location = new System.Drawing.Point(469, 6);
             this.Field.Multiline = true;
             this.Field.Name = "Field";
+            this.Field.ReadOnly = true;
             this.Field.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.Field.Size = new System.Drawing.Size(300, 445);
             this.Field.TabIndex = 5;
-            this.Field.TextChanged += new System.EventHandler(this.Field_TextChanged);
             // 
             // Btn2
             // 
@@ -88,8 +88,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.SizeChanged += new System.EventHandler(this.size);
-            this.Validated += new System.EventHandler(this.val);
             this.ResumeLayout(false);
             this.PerformLayout();
 

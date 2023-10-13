@@ -28,7 +28,7 @@ namespace Time
             
             InitializeComponent();
         }
-        async void Form1_Load(object sender, EventArgs e)
+        void Form1_Load(object sender, EventArgs e)
         {
           
         }
@@ -36,69 +36,6 @@ namespace Time
         {    
             await Task.Delay(1000);
             return DateTime.Now.ToLongTimeString();
-            
-        }
-        //Проверка не появился ли новый файл или папка
-        public void Filelocal()
-        {
-                if (Directory.Exists(dirname))
-                {
-                    string[] dirs = Directory.GetDirectories(dirname);
-                    foreach (string s in dirs)
-                    {
-                        if (dirs.Length < dir.Length)
-                        {
-                            Array.Resize(ref dirs, dir.Length);
-                            Field.Text += s + Environment.NewLine;
-                        }
-                        else if(dirs.Length > dir.Length)
-                        {
-                            Array.Resize(ref dir, dirs.Length);
-                            Field.Text += s + Environment.NewLine;
-                        }
-                        else if (s == dir[g])
-                        {
-                            Field.Text += s + Environment.NewLine;
-                        }
-                        
-                        
-                    }
-                    
-                    score++;
-                }
-                g = 0;
-                if (Directory.Exists(dirname))
-                {
-                    string[] dirs = Directory.GetFiles(dirname);
-                    foreach (string s in dirs)
-                    {
-                        if(dirs.Length < file.Length)
-                        {
-                            Array.Resize(ref dirs, file.Length);
-                            Field.Text += s + Environment.NewLine;
-                        }
-                        else if (dirs.Length > file.Length)
-                        {
-                            Array.Resize(ref file, dirs.Length);
-                            Field.Text += s + Environment.NewLine;
-                        }
-                        else if (s == file[g])
-                        {
-                            Field.Text += s + Environment.NewLine;
-                        }
-
-                    }
-                }
-                g = 0;
-        }
-        //
-        private void val(object sender, EventArgs e)
-        {
-
-        }
-
-        async private void size(object sender, EventArgs e)
-        {
             
         }
 
@@ -152,11 +89,6 @@ namespace Time
             }
             g = 0;
             
-        }
-        //
-        private void Field_TextChanged(object sender, EventArgs e)
-        {
-
         }
         async public void Search()
         {
